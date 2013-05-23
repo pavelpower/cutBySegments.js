@@ -4,7 +4,7 @@
         var array = this,
             res = [],
             i = 0,
-            len = array.length + array.length % segmentSize;
+            len = array.length + (array.length % segmentSize ? 1 : 0);
 
         while (i < len) {
             res.push(array.slice(i, i + segmentSize));
